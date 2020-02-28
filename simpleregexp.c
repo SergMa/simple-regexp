@@ -46,7 +46,7 @@ static int priv_compare( char * filter, char * str, int ast )
     s = str;
 
     if(f[0]=='*') {
-        if(*s=='\0')
+        if( priv_compare(f+1,s,1)==1 )
             return 1;
         while(*s != '\0') {
             if( priv_compare(f+1,s,1)==1 )

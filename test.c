@@ -156,6 +156,41 @@ int main( void )
     result = 0;
     printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
 
+    flt    = "*753768337658*";
+    str    = "";
+    result = 0;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "?";
+    str    = "";
+    result = 0;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "?*";
+    str    = "";
+    result = 0;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "*?";
+    str    = "";
+    result = 0;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "*";
+    str    = "";
+    result = 1;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "**";
+    str    = "";
+    result = 1;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
+    flt    = "*95";
+    str    = "";
+    result = 0;
+    printf("simpleregexp(\"%s\",\"%s\")=%d (must be %d)\n", flt, str, simpleregexp(flt,str), result );
+
     printf("finished\n");
     return 0;
 }
